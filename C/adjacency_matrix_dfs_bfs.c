@@ -1,10 +1,6 @@
 /* 
  Adjacency matrix graph implementation
-<<<<<<< HEAD:C/adjacency_matrix_dfs_bfs.c
 */
-=======
- */
->>>>>>> 33941366d04135d53d8c1742475eb7b11250dfa3:C/adjacency_matrix_dfs_bds.c
 #include <stdio.h>
 #include <stdlib.h>
 
