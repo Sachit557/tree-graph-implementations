@@ -1,6 +1,6 @@
 /* 
  Adjacency matrix graph implementation
- * */
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
