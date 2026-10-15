@@ -14,6 +14,7 @@ The implementations are kept relatively straightforward and focused on understan
 * Breadth-First Search (BFS)
 * Cycle Detection
 * Graph Traversal
+* Adjacency Matrix and Adjacency List Traversal 
 * 2D Matrix Traversal
 * Grid-based DFS/BFS
 * More graph algorithms and problems will be added over time.
