@@ -1,5 +1,14 @@
 /*
-    checks whether a graph is bipartite or not . colours the graph into 2 teams and compares colour if cycle
+    Checks whether an undirected graph is bipartite using DFS.
+
+    Colours the graph using two colours (1 and 2), ensuring that
+    no two adjacent vertices belong to the same team.
+
+    If two adjacent vertices have the same colour, the graph is
+    not bipartite and "IMPOSSIBLE" is printed.
+
+    CSES Problem: Building Teams
+    https://cses.fi/problemset/task/1668/
 */
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,3 +1,13 @@
+/*
+    Implements Depth First Search (DFS) using two approaches:
+
+    1. Iterative DFS using an explicit stack.
+    2. Recursive DFS using the call stack.
+
+    Traverses an undirected graph starting from a given node.
+
+    Uses a visited array to avoid processing nodes multiple times.
+*/
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,6 +1,12 @@
 /*
-    Breath first search (bfs) can be used to find shortest path between 2 nodes assuming that weight of all edges is the same
+    BFS to find the shortest path between node 1 and node n
+    in an unweighted undirected graph.
+
+    Uses a parent array for path reconstruction.
+
+    If no path exists, prints "IMPOSSIBLE".
 */
+
 #include <bits/stdc++.h>
 using namespace std;
 
