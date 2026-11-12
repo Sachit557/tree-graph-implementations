@@ -44,25 +44,26 @@ int main()
 
 void Dijkstra(std::vector<std::vector<std::pair<int,int>>> &graph , int u , int v){
     // u to v
-    std::set<pair<int,int>> st;
-    st.insert({0 , u});
-    std::vector<int> used(graph.size(),0);
+    std::priority_queue<std::pair<int,int> , std::vector<std::pair<int,int>> , greater<pair<int,int>>> pq;
+    pq.push({0 , u});
     std::vector<int> dist(graph.size() , INT_MAX);
     dist[u]=0;
 
     std::pair<int,int> vertex ;int wt;
-    while(!st.empty()){
-        vertex = *st.begin();
-        st.erase(st.begin());
+    while(!pq.empty()){
+        vertex = pq.top();
+        pq.pop();
 
-        if (used[vertex.second]) 
+        if (vertex.first != dist[vertex.second])  // it may have multiple entries of weight of same node . so if an entry in pq is outdated we dont consider it again
             continue;
+
+        if (vertex.second == v) // shortest distance to v is found so we can break early
+            break;
         
-        used[vertex.second]=1;
         for (auto child : graph[vertex.second]){
             if (dist[vertex.second]+child.second < dist[child.first]){
                 dist[child.first]=dist[vertex.second]+child.second;
-                st.insert({dist[child.first] , child.first});
+                pq.push({dist[child.first] , child.first});
             }
         }
 
@@ -81,7 +82,7 @@ void Sachit0007(){
         graph[v].push_back({u,w});
     }
 
-    // 1 to 6
+    // finding shorted distance between 1 and 6
     Dijkstra(graph , 1 , 6);
 }
 
