@@ -61,9 +61,7 @@ void bfs(std::vector<std::vector<char>> &graph, std::pair<int, int> &src, std::v
         {
             dist[i + 1][j] = dist[i][j] + 1;
             if (dist[i + 1][j] < mon[i + 1][j] || mon[i + 1][j] == -1)
-            {
                 q.push({i + 1, j});
-            }
             dir[i + 1][j] = 'D';
         }
 
